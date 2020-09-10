@@ -1,0 +1,19 @@
+.card__container{
+    justify-content: center;
+    align-items: center;
+}
+.card__img-container{
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    margin-right: 15px;
+}
+.card__p{
+    text-transform: capitalize;
+}
+.card__body{
+    padding-left: 15px;
+    border-left: 1px solid;
+}
