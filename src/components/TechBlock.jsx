@@ -48,7 +48,7 @@ const TechBlock = () => {
             </CardGroup>
             <CardGroup>
                 <Card>
-                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/node.js.svg`}  />
+                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/Node.js.svg`}  />
                     <Card.Body>
                         <Card.Title>Node.JS</Card.Title>
                         <Card.Text>
