@@ -31,7 +31,7 @@ const CurriculumApp = () => {
                     <TechBlock />
                 </div>
                 <div className="col-lg-6 col-sm-12">
-                    <div className="content__block">
+                    <div className="content__block animate__animated animate__bounceInRight animate__delay-1s">
                         <h1>Mi experiencia</h1>
                         <div className="card-group">
 
@@ -43,7 +43,7 @@ const CurriculumApp = () => {
 
                         </div>
                     </div>
-                    <div  className="content__block">
+                    <div  className="content__block animate__animated animate__bounceInRight animate__delay-2s">
                         <h1>Idiomas</h1>
                         <ListGroup>
                             <ListGroupItem><i className="fas fa-globe-americas"></i> Español - Nativo</ListGroupItem>
@@ -51,7 +51,7 @@ const CurriculumApp = () => {
                             <ListGroupItem><i className="fas fa-globe-americas"></i> Italiano - Basico</ListGroupItem>
                         </ListGroup>
                     </div>
-                    <div className="content__block">
+                    <div className="content__block animate__animated animate__bounceInRight animate__delay-2s">
                         <h1>Educación</h1>
                         <div className="card-group">
                             {

@@ -3,7 +3,7 @@ import { Card, CardGroup } from 'react-bootstrap'
 
 const TechBlock = () => {
     return (
-        <div className="content__block">
+        <div className="content__block animate__animated animate__bounceInLeft animate__delay-2s">
             <h1>Tecnologías</h1>
             <CardGroup >
                 <Card>

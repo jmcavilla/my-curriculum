@@ -17,12 +17,12 @@ const Header = () => {
     return (
         <div className="row header__container">
                 <div className="col-lg-3 col-sm-12">
-                    <div className="header__img-container">
+                    <div className="header__img-container animate__animated animate__bounceInLeft animate__slow">
                         <img className="header__img" src={`${process.env.PUBLIC_URL}/images/my-photo-2.jpeg`}></img>
                     </div>
                 </div>
                 <div className="col-lg-6 col-sm-12">
-                    <div className="header__info-container">
+                    <div className="header__info-container animate__animated animate__bounceInDown animate__slow">
                         <h1>
                             Juan Manuel Cavilla
                         </h1>
@@ -35,7 +35,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="col-lg-3 col-sm-12">
-                    <div className="header__info-container">
+                    <div className="header__info-container animate__animated animate__bounceInRight animate__slow">
 
                         <h5 className="header__link" onClick={handleLinkedin}>
                             <i className="fab fa-linkedin"></i> 

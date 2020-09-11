@@ -9,7 +9,7 @@ const ExpCard = ({ position, company, time, description }) => {
     }
     return (
         <>
-            <div className="media card__container">
+            <div className="media card__container ">
                 <div className="card__img-container">
                     <img className="card-img-top" src={`${process.env.PUBLIC_URL}/images/${company}.png`} alt={`${company}`} />
 
