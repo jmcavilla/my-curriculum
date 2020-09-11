@@ -18,7 +18,7 @@ const Header = () => {
         <div className="row header__container">
                 <div className="col-lg-3 col-sm-12">
                     <div className="header__img-container">
-                        <img className="header__img" src={`${process.env.PUBLIC_URL}/images/my-photo.jpeg`}></img>
+                        <img className="header__img" src={`${process.env.PUBLIC_URL}/images/my-photo-2.jpeg`}></img>
                     </div>
                 </div>
                 <div className="col-lg-6 col-sm-12">
