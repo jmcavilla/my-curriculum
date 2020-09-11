@@ -31,7 +31,7 @@ const TechBlock = () => {
                     <Card.Body>
                         <Card.Title>React Native</Card.Title>
                         <Card.Text>
-                            Durante los ultimos años estuve utilizando Angular JS como principal framework para el desarrollo de la web de una importante Compañia de salud de la Republica Argentina. Aunque vieja, me ayudo a ingresar en el hermoso mundo del desarrollo web.
+                            React Native es uno de esos desafios personales que me propuse recientemente. Luego de aprender a desarrollar en ReactJS para poder realizar desarrollo web quise interiorizarme en el mundo de lo nativo y React Native es una forma sencilla de realizarlo si sos desarrollador web. Con React Native tengo algunas apps pensadas para realizar en un futuro que espero que pueda llevar adelante.
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -41,7 +41,18 @@ const TechBlock = () => {
                     <Card.Body>
                         <Card.Title>Ionic</Card.Title>
                         <Card.Text>
-                            Durante los ultimos años estuve utilizando Angular JS como principal framework para el desarrollo de la web de una importante Compañia de salud de la Republica Argentina. Aunque vieja, me ayudo a ingresar en el hermoso mundo del desarrollo web.
+                            Junto con AngularJS, conoci Ionic. Este framework lo utilizabamos junto con AngularJS para realizar la web mobile de la Compañia de salud. Dentro de la migracion que estamos realizando, esta incluido tambien utilizarlo junto con Capacitor para actualizar la app móvil tanto de iOS como de Android.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </CardGroup>
+            <CardGroup>
+                <Card>
+                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/node.js.svg`}  />
+                    <Card.Body>
+                        <Card.Title>Node.JS</Card.Title>
+                        <Card.Text>
+                            Dentro de este deseo de seguir creciendo dentro del desarrollo web y nativo, Node JS es, para mi, el camino a seguir para realizar los backends de dichas aplicaciones. Recien estoy comenzando con el aprendizaje pero espero en un futuro proximo ya poder aprovechar la potencia de Node.JS en las apps que tengo pensadas a realizar.
                         </Card.Text>
                     </Card.Body>
                 </Card>

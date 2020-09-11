@@ -13,7 +13,6 @@ const CurriculumApp = () => {
     const [education, setEducation] = useState([]);
 
     useEffect(() => {
-        console.log(getJobs())
         setJobs(getJobs());
     }, [jobs]);
 
@@ -50,7 +49,6 @@ const CurriculumApp = () => {
                             <ListGroupItem><i className="fas fa-globe-americas"></i> Español - Nativo</ListGroupItem>
                             <ListGroupItem><i className="fas fa-globe-americas"></i> Ingles - Intermedio</ListGroupItem>
                             <ListGroupItem><i className="fas fa-globe-americas"></i> Italiano - Basico</ListGroupItem>
-
                         </ListGroup>
                     </div>
                     <div className="content__block">

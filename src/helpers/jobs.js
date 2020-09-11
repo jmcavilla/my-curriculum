@@ -11,28 +11,28 @@ const jobs = [
         position: 'Full stack Developer SR.',
         company: 'quadion',
         time: 'Feb-2018 / Mar-2019',
-        description: 'Luego de un tiempo aprendiendo las nuevas tecnologías y con el acompañamiento de un gran equipo y por sobre todo un gran lider de proyecto, se me recompenso con un crecimiento dentro del proyecto, donde pase a tener mas responsabilidades con respecto al cliente como con mis compañeros. Con este crecimiento se me dio la oportunidad de ser responsable de la actualizacion de la arquitectura del Backend hecho en Java que se utiliza para las apps de iOS y Android y la web mobile.'
+        description: 'Luego de un tiempo aprendiendo las nuevas tecnologías y con el acompañamiento de un gran equipo y por sobre todo un gran líder de proyecto, se me recompenso con un crecimiento dentro del proyecto, donde pase a tener más responsabilidades con respecto al cliente como con mis compañeros. Con este crecimiento se me dio la oportunidad de ser responsable de la actualización de la arquitectura del Backend hecho en Java que se utiliza para las apps de iOS y Android y la web mobile.'
     },
     {
         id: 3,
         position: 'Full stack Developer SSR.',
         company: 'quadion',
         time: 'Jul-2017 / Ene-2018',
-        description: 'Llegue a Quadion como un Java Developer SSR, pero aca conoci lo que hoy me apasiona, el desarrollo web. Ingrese para el proyecto de la aplicacion y la pagina mobile de la empresa de Salud OSDE. Comence a aprender nuevas tecnologias sobre todo Javascript y mas puntualmente aprendiendo frameworks como AngularJS, Ionic y Sencha.'
+        description: 'Llegue a Quadion como un Java Developer SSR, pero acá conocí lo que hoy me apasiona, el desarrollo web. Ingrese para el proyecto de la aplicación y la página mobile de la empresa de Salud OSDE. Comencé a aprender nuevas tecnologías sobre todo Javascript y más puntualmente aprendiendo frameworks como AngularJS, Ionic y Sencha.'
     },
     {
         id: 2,
         position: 'Java Developer SSR',
         company: 'indra',
         time: 'Ene-2014 / Jun-2017',
-        description: 'En indra participe en dos proyectos. Ambos para la empresa Telefonica. El primer proyecto fue directamente para Telefonica, en la actualizacion del sistema interno de asignacion de tipos de lineas. Luego, participe para un proyecto de Movistar, donde estabamos encargados del sistema de asignacion de tickets para el personal de gestion de tareas de la empresa.'
+        description: 'En Indra participe en dos proyectos. Ambos para la empresa Telefónica. El primer proyecto fue directamente para Telefónica, en la actualización del sistema interno de asignación de tipos de líneas. Luego, participe para un proyecto de Movistar, donde estábamos encargados del sistema de asignación de tickets para el personal de gestión de tareas de la empresa.'
     },
     {
         id: 1,
         position: 'Java Developer',
         company: 'accenture',
         time: 'Nov-2011 / Ene-2014',
-        description: 'Mi primer trabajo. Forme parte de varios equipos desarrollando en Java. Trabaje en proyectos para clientes como Telefonica, Telecom Italia e Iberdrola. Aqui comenze mi aorendizaje en distintos Frameworks Java como Struts 1 y 2, Spring, Maven, etc.'
+        description: 'Mi primer trabajo. Forme parte de varios equipos desarrollando en Java. Trabaje en proyectos para clientes como Telefónica, Telecom Italia e Iberdrola. Aquí comencé mi aprendizaje en distintos Frameworks Java como Struts 1 y 2, Spring, Maven, etc.'
     },
 ]
 
