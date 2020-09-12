@@ -3,7 +3,7 @@ import React from 'react'
 const WhoBlock = () => {
     return (
         <div className="content__block animate__animated animate__bounceInLeft animate__delay-1s">
-            <div className="jumbotron jumbotron-fluid">
+            <div className="jumbotron jumbotron-fluid content__jumbotron">
                 <div className="container">
                     <h1 className="display-4">¿Quién soy?</h1>
                     {/* <p className="lead">Me considero una persona comprometida y proactiva, siempre dispuesto a mejorar como profesional y 

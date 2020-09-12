@@ -1,7 +1,11 @@
+@import './../node_modules/bootstrap/scss/functions';
+@import './../node_modules/bootstrap/scss/variables';
+@import './styles/colors';
+@import './../node_modules/bootstrap/scss/bootstrap.scss';
 @import './styles/header';
 @import './styles/cards';
 @import './styles/content';
 
 .container-border{
-    border: 1px solid #D3D3D3
+    // border: 1px solid #D3D3D3
 }

@@ -1,6 +1,6 @@
 .header__img{
     border-radius: 100%;
-    border: 3px solid white;
+    border: 2px solid $violet;
 }
 .header__container{
     // background-color: #9B59B6;
@@ -30,6 +30,6 @@
     }
 
     &:hover{
-        color: darken( $color: #ffffff, $amount: 20);
+        color: darken( $color: $violet, $amount: 20);
     }
 }

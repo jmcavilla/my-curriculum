@@ -1,7 +1,8 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
+
 
 const Header = () => {
-
     const handleLinkedin = () => {
         window.open('https://www.linkedin.com/in/juan-manuel-cavilla-152a1739/')
     }
@@ -12,6 +13,10 @@ const Header = () => {
 
     const handleEmail = () => {
         window.open('https://mail.google.com/mail/?view=cm&fs=1&to=juanmcavilla@gmail.com');
+    }
+
+    const handleDownloadPDF = () => {
+        window.open(`${process.env.PUBLIC_URL}/cv.pdf`)
     }
 
     return (
@@ -49,6 +54,10 @@ const Header = () => {
                             <i className="fas fa-envelope"></i> 
                             juanmcavilla@gmail.com
                         </h5>
+                        {/* <div> */}
+                            <Button variant="outline-primary" onClick={handleDownloadPDF} block>Descargar PDF</Button>
+                        {/* </div> */}
+
                     </div>
                 </div>
             </div>

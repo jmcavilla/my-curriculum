@@ -1,7 +1,15 @@
 .content__container{
     
 }
+.content__jumbotron{
+    background-color: white;
+    border: 1px solid $violet;
+    border-radius: 15px;
+}
 
+.card{
+    border-color: $violet;
+}
 
 .content__block{
     margin-top: 15px;
