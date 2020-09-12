@@ -29,7 +29,8 @@
         margin-right: 10px;
     }
 
+    transition: color .3s ease;
     &:hover{
-        color: darken( $color: $violet, $amount: 20);
+        color: $violet;
     }
 }
