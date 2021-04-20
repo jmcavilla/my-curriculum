@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 const ExpCard = ({ position, company, time, description, type= 'left' }) => {
     const [showModal, setShowModal] = useState(false)
@@ -10,7 +10,7 @@ const ExpCard = ({ position, company, time, description, type= 'left' }) => {
     return (
         <>
             <div className="media card__container ">
-               { type == 'left' ?
+               { type === 'left' ?
                <>
                     <div className="card__img-container">
                         <img className="card-img-top" src={`${process.env.PUBLIC_URL}/images/${company}.png`} alt={`${company}`} />

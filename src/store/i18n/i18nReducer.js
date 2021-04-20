@@ -7,7 +7,7 @@ export const setLang = (lang) => ({
 })
 
 const initialState = {
-    lang: navigator.language.includes('en') ? 'EN' : 'ES' 
+    lang: navigator.language.includes('es') ? 'ES' : 'EN' 
 }
 
 export const i18nReducer = ( state = initialState, action ) => {

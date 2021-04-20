@@ -10,7 +10,7 @@ export const NumbersBlock = () => {
                 <div style={{
                         display: 'flex',
                         flexDirection: 'row',
-                        justifyContent: 'center',
+                        
                         justifyContent: 'space-between'
                 }}>
                     <ExpDataBlock subEs="Años experiencia" subEn="Years Experience" number={moment().diff('2011', 'years')}/>

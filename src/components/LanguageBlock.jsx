@@ -25,7 +25,7 @@ export const LanguageBlock = ({ showMobile = false}) => {
                                 variant={lang === 'EN' ? "warning" : "outline-warning"}
                                 onClick={() => changeLang('EN')}
                             >
-                            <i class="fas fa-globe"></i>EN
+                            <i className="fas fa-globe"></i>EN
                             </Button>
                             
                         </div>
@@ -43,7 +43,7 @@ export const LanguageBlock = ({ showMobile = false}) => {
                                 variant={lang === 'ES' ? "warning" : "outline-warning"}
                                 onClick={() => changeLang('ES')}
                             >
-                                <i class="fas fa-globe"></i>ES
+                                <i className="fas fa-globe"></i>ES
                             </Button>
                             
                         </div>

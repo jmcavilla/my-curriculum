@@ -21,12 +21,12 @@ export const TechCarousel = () => {
     return (
         <>
              <Jumbotron style={{ backgroundColor: '#20202a', color: 'white', boxShadow: "10px 10px 16px 0px rgb(0 0 0 / 42%)"}}>
-                <h4 style={{textAlign: 'center'}}>{lang == 'ES' ? `Tecnologías` : 'Technologies'}</h4>
+                <h4 style={{textAlign: 'center'}}>{lang === 'ES' ? `Tecnologías` : 'Technologies'}</h4>
                 <div>
                     <Slider  {...settings}>
                         {
-                            techs && techs.map( tech => (
-                                <div>
+                            techs && techs.map( (tech, i) => (
+                                <div key={i}>
                                     <div style={{
                                         justifyContent: 'center',
                                         display: 'flex',

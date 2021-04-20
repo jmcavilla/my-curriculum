@@ -59,7 +59,7 @@ export const InfoBlock = () => {
                         <h5>Juan Manuel Cavilla</h5>
                         <p style={{ color: '#7a7a7a' }}>{ texts.rol }</p>
                     </div>
-                    <Button style={{ width: '100%'}} variant="warning" onClick={handleDownloadPDF}>{lang == 'ES' ? `Descargar CV` : `Download CV`}</Button>
+                    <Button style={{ width: '100%'}} variant="warning" onClick={handleDownloadPDF}>{lang === 'ES' ? `Descargar CV` : `Download CV`}</Button>
                     <hr style={{ color: 'gray', backgroundColor:'gray'}}></hr>
                     <Row>
                         <div className="icons-container" >
@@ -89,8 +89,8 @@ export const InfoBlock = () => {
                     <JumboInfo label={texts.age} info={moment().diff('1991-08-07','years')}/>
                     <hr style={{ color: 'gray', backgroundColor:'gray'}}></hr>
                     {
-                        texts.languages.map( lang => (
-                            <Row>
+                        texts.languages.map( (lang, i) => (
+                            <Row key={i}>
                                 <Col>
                                     <p>{lang.lang}</p>  
                                 </Col>

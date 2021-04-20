@@ -9,16 +9,10 @@ import { ExpDataBlock } from './ExpDataBlock';
 export const ExperienceBlock = () => {
     const { lang } = useSelector(state => state.i18n)
     const [jobs, setJobs] = useState([]);
-    const [years, setYears] = useState(10);
-
-    const getYears = () => {
-        setYears(moment().diff('2011', 'years'))
-    }
 
     useEffect(() => {
-        getYears();
-        setJobs(getJobs());
-    }, [jobs]);
+        setJobs(getJobs(lang));
+    }, [jobs, lang]);
     return (
         <>
             
