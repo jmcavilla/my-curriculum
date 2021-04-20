@@ -5,7 +5,47 @@
 @import './styles/header';
 @import './styles/cards';
 @import './styles/content';
+@import './styles/infoBlock';
 
-.container-border{
-    // border: 1px solid #D3D3D3
+body{
+    background-color: #191923;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #20202a;
+    color: white;
+    height: 10vh;
+    margin-bottom: 5vh;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    
+    .footer-email{
+        margin-bottom: 0; 
+        color: rgb(122, 122, 122); 
+        display: flex;
+        transition: color .3s ease;
+        &:hover{
+            cursor: pointer;
+            color: white;
+        }
+    }
+}
+
+.slick-slide{
+    height: 200px;
+}
+
+.slick-dots li.slick-active button:before{
+    color: white;
+}
+
+.slick-dots li button:before{
+    color: white;
 }

@@ -1,0 +1,23 @@
+{
+    "rol": "Lider Técnico - Full Stack",
+    "country": "País",
+    "city": "Ciudad",
+    "age": "Edad",
+    "languages": [
+        {
+            "lang": "Español",
+            "perc": 100,
+            "variant": "success"
+        },
+        {
+            "lang": "Ingles",
+            "perc": 66,
+            "variant": "warning"
+        },
+        {
+            "lang": "Italiano",
+            "perc": 33,
+            "variant": "danger"
+        }
+    ]
+}

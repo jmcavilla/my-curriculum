@@ -26,7 +26,7 @@ const Header = () => {
                         <img className="header__img" src={`${process.env.PUBLIC_URL}/images/my-photo-2.jpeg`}></img>
                     </div>
                 </div>
-                <div className="col-lg-6 col-sm-12">
+                <div className="col-lg-6 col-md-6 col-sm-12">
                     <div className="header__info-container animate__animated animate__bounceInDown animate__slow">
                         <h1>
                             Juan Manuel Cavilla

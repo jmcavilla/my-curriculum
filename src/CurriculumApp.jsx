@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import ExpCard from './components/ExpCard'
-import { ListGroup, ListGroupItem, } from 'react-bootstrap'
+import { Button, Col, Form, FormControl, Image, Jumbotron, ListGroup, ListGroupItem, Nav, Navbar, NavDropdown, ProgressBar, Row, } from 'react-bootstrap'
 import WhoBlock from './components/WhoBlock'
 import TechBlock from './components/TechBlock'
 import { getJobs } from './helpers/jobs';
+import { getTechs } from './helpers/technologies';
 import { getEducation } from './helpers/education';
+import { InfoBlock } from './components/InfoBlock';
+import { ExperienceBlock } from './components/ExperienceBlock';
+import { useDispatch, useSelector } from 'react-redux';
+import { setLang } from './store/i18n/i18nReducer';
+import Slider from 'react-slick';
+import { TechCarousel } from './components/TechCarousel'
+import { NumbersBlock } from './components/NumbersBlock'
+import { LanguageBlock } from './components/LanguageBlock'
+import moment from 'moment'
+import { HelloBlock } from './components/HelloBlock'
 
 const CurriculumApp = () => {
-
+    
     const [jobs, setJobs] = useState([]);
     const [education, setEducation] = useState([]);
-
+    
     useEffect(() => {
         setJobs(getJobs());
     }, [jobs]);
@@ -23,47 +34,28 @@ const CurriculumApp = () => {
     
 
     return (
-        <div className="container container-border">
-            <Header />
-            <div className="row content__container">
-                <div className="col-lg-6 col-sm-12">
-                    <WhoBlock />
-                    <TechBlock />
-                </div>
-                <div className="col-lg-6 col-sm-12">
-                    <div className="content__block animate__animated animate__bounceInRight animate__delay-1s">
-                        <h1>Mi experiencia</h1>
-                        <div className="card-group">
-
-                            {
-                                jobs.map( job => (
-                                    <ExpCard {...job} key={job.id} />
-                                ))
-                            }                        
-
+        <>
+            {
+                <Row style={{
+                    marginTop: '2em'
+                }}>
+                    <Col xs={12} md={3} xl={3}>
+                        <InfoBlock />
+                    </Col>
+                    <Col xs={12} md={9} xl={9}>
+                        <HelloBlock />
+                        <WhoBlock />
+                        <NumbersBlock />
+                        <TechCarousel />
+                        <ExperienceBlock />
+                        <div className="footer" style={{boxShadow: '10px 10px 16px 0px rgb(0 0 0 / 42%)'}}>
+                            <p style={{ marginBottom: '0', color: 'rgb(122, 122, 122)'}}>© {moment().year()} All Rights Reserved.</p>
+                            <p class="footer-email d-none d-lg-block">juanmcavilla.dev@gmail.com</p>
                         </div>
-                    </div>
-                    <div  className="content__block animate__animated animate__bounceInRight animate__delay-2s">
-                        <h1>Idiomas</h1>
-                        <ListGroup>
-                            <ListGroupItem><i className="fas fa-globe-americas"></i> Español - Nativo</ListGroupItem>
-                            <ListGroupItem><i className="fas fa-globe-americas"></i> Ingles - Intermedio</ListGroupItem>
-                            <ListGroupItem><i className="fas fa-globe-americas"></i> Italiano - Basico</ListGroupItem>
-                        </ListGroup>
-                    </div>
-                    <div className="content__block animate__animated animate__bounceInRight animate__delay-2s">
-                        <h1>Educación</h1>
-                        <div className="card-group">
-                            {
-                                education.map( ed => (
-                                    <ExpCard {...ed} key={ed.id} />
-                                ))
-                            }                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </Col>
+                </Row>
+            }   
+        </>
     )
 }
 
