@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+    <!-- ./fonts -->
+
+
+    <!-- css -->
+    <style type="text/css">
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            height: 100%
+        }
+
+        body {
+            width: 21cm;
+            height: 100%;
+            min-height: 29.7cm;
+            position: relative;
+            margin: 0;
+            padding: 0 0;
+            color: #333;
+            line-height: 22px;
+         font: 13px "Source Sans Pro", Arial;
+             font-style: normal
+        }
+
+        h1 {
+         font: 30px "Source Sans Pro", Arial;            margin: 0;
+            padding: 25px 0 5px 0;
+            font-weight: 600
+        }
+
+        h1 span {
+            position: relative;
+            font-style: normal;
+            display: inline;
+            margin-right: 1px;
+            padding: 0
+        }
+
+        h2 {
+         font: 17px "Source Sans Pro", Arial;            font-weight: 600;
+            margin: 0;
+            padding: 0 0 15px 0;
+            border-bottom: 2px solid #d2d2d2
+        }
+
+        h3 {
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0
+        }
+
+        p {
+            color: #4c4c4c;
+            line-height: 18px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background: #d2d2d2
+        }
+
+        .sidebar--bg {
+            position: fixed;
+            left: 0;
+            width: 25px;
+            height: 18000px;
+            background: #333
+        }
+
+        .sections {
+            left: 40px;
+            position: relative;
+            width: 715px
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            padding: 0
+        }
+
+        .section p {
+            display: block;
+            font-style: normal
+        }
+
+        .section.personal .section--item:first-child .section--heading-group {
+            padding-top: 4px
+        }
+
+        .section.personal .section--item:first-child .section--date {
+            top: 4px
+        }
+
+        .section:last-child {
+            border: none
+        }
+
+        .section.section--summary {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #d2d2d2
+        }
+
+        .section.section--summary .section--content {
+            padding-top: 0;
+            padding-left: 0
+        }
+
+        .section--name {
+            position: relative
+        }
+
+        .section--name.has--avatar h1 {
+            padding-left: 70px
+        }
+
+        .section--avatar {
+            display: inline-block;
+            position: absolute;
+            top: 15px;
+            padding: 0;
+            margin: 0;
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            -webkit-background-size: cover !important;
+            background-size: cover !important
+        }
+
+        .section--title {
+            display: block;
+            position: relative;
+            z-index: 99;
+            margin: 0;
+            padding: 15px 0 10px 0;
+            page-break-inside: avoid;
+            background: #fff;
+            border-bottom: 2px solid #fff
+        }
+
+        .section--title span {
+            display: inline-block;
+            margin-right: 0
+        }
+
+        .section--time-line-overlay {
+            position: absolute;
+            top: 0;
+            left: 135px;            height: 100%;
+            width: 1px;
+            background: #2b2b38
+        }
+
+        .section--time-line {
+            position: absolute;
+            top: 0;
+            left: 135px;            height: 100%;
+            width: 1px;
+            background: #2b2b38
+        }
+
+        .section--time-line-hide-overlay {
+            display: none;
+            position: absolute;
+            left: 131px;            top: 24px;
+            width: 10px;
+            height: 100%;
+            background: #fff;
+            z-index: 9
+        }
+
+        .section--item:last-child {
+            background: #fff
+        }
+
+        .section--item:last-child .section--time-line {
+            height: 30px
+        }
+
+        .section--item:last-child .section--time-line-hide-overlay {
+            display: inline
+        }
+
+        .section--time-line-dot {
+            position: absolute;
+            left: -3px;
+            top: 18px;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: #2b2b38
+        }
+
+        .section--heading-group {
+            display: block;
+            padding: 12px 0 0 150px;            margin: 0;
+            page-break-inside: avoid
+        }
+
+        .section.personal {
+            margin-bottom: 5px
+        }
+
+        .section.personal .section--item {
+            background: 0 0
+        }
+
+        .section.personal .section--heading-group {
+            padding-top: 10px
+        }
+
+        .no-indent .section--item .section--heading-group {
+            padding-left: 20px
+        }
+
+        .no-indent .section--item .section--content {
+            padding-left: 20px
+        }
+
+        .no-indent .section--item .section--time-line {
+            left: 5px
+        }
+
+        .no-indent .section--item .section--time-line-hide-overlay {
+            left: 5px
+        }
+
+        .no-indent .section--time-line-overlay {
+            left: 5px
+        }
+
+        .section--list {
+            display: block;
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .section--item {
+            display: block;
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        .section--item.skills {
+            display: inline-block;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            width: 100%;
+            margin: 0;
+            padding-left: 0;
+            border: none
+        }
+
+        .section--item.skills h3 {
+            font-size: 13px
+        }
+
+        .section--item.skills:last-child {
+            padding-bottom: 0
+        }
+
+        .skills--label {
+            display: inline-block;
+            width: 175px;
+            margin: 0
+        }
+
+        .skills--stars {
+            display: inline-block;
+            position: relative;
+            top: 0
+        }
+
+        .skills--stars svg {
+            fill: #b1b1b1
+        }
+
+        .skills--stars svg.active {
+            fill: #2b2b38
+        }
+
+        .skills--level {
+            position: relative;
+            display: inline-block;
+            top: 0;
+            margin: 0 0 0 5px;
+            height: 9px;
+            width: 9px;
+            border-radius: 100%;
+            opacity: .4
+        }
+
+        .skills--level.active {
+            opacity: 1
+        }
+
+        .section--date {
+            position: absolute;
+            left: 0;
+            text-align: left;
+            top: 15px;
+         width: 120px;            font-size: 13px;
+            padding: 0;
+            margin: 0
+        }
+
+        .section.personal .section--date {
+            top: 9px
+        }
+
+        .section--heading {
+            display: block;
+            padding: 0;
+            margin: 0
+        }
+
+        .section--sub-heading {
+            display: block;
+            padding: 3px 0 0 0;
+            margin: 0;
+            font-style: italic;
+            font-size: 13px
+        }
+
+        .section--content {
+            display: block;
+            padding: 5px 0 0 150px;            margin: 0
+        }
+
+        .section--content p {
+            display: block
+        }
+
+        .section--content ol, .section--content ul {
+            white-space: normal;
+            font-weight: 400;
+            list-style-position: outside;
+            color: #4c4c4c;
+            margin: 0;
+            padding: 0 0 0 16px
+        }
+
+        .section--content ol li, .section--content ul li {
+            line-height: 18px
+        }
+
+        .section--content ul li {
+            list-style-type: disc
+        }
+
+        .section--content ol {
+            padding-left: 14px
+        }
+
+        .section--content-single-textarea {
+            padding-left: 0
+        }
+
+        .c--434a54 .sidebar--bg, .c--434a54 .skills--level {
+            background: #434a54 !important
+        }
+
+        .c--732937 .sidebar--bg, .c--732937 .skills--level {
+            background: #732937 !important
+        }
+
+        .c--11345c .sidebar--bg, .c--11345c .skills--level {
+            background: #11345c !important
+        }
+
+        .c--1a4a22 .sidebar--bg, .c--1a4a22 .skills--level {
+            background: #1a4a22 !important
+        }
+
+        .c--02636f .sidebar--bg, .c--02636f .skills--level {
+            background: #02636f !important
+        }
+
+    </style>
+    <!-- ./css -->
+
+
+
+</head>
+<body class="c--11345c">
+
+<div class="sidebar--bg"></div>
+
+<section class="sections">
+
+    <div class="section--name  ">
+        
+
+        <h1>Curriculum Vitae</h1>
+    </div>
+
+    <div class="section personal">
+        <div class="section--title">
+            <h2>
+                Personal
+            </h2>
+        </div>
+
+        <ol class="section--list">
+            <li class="section--item">
+                <div class="section--heading-group">
+                    <div class="section--date">
+                        Nombre
+                    </div>
+                    <div class="section--heading">
+                        <h3>
+                                                            Juan Manuel Cavilla
+                                                    </h3>
+                    </div>
+                </div>
+            </li>
+
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Dirección
+                        </div>
+                        <div class="section--heading">
+                            <h3>24 de Noviembre 1738,                                                                    1242 Buenos Aires
+                                                            </h3>
+                        </div>
+                    </div>
+                </li>
+            
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Número de teléfono
+                        </div>
+                        <div class="section--heading">
+                            <h3>1130647410</h3>
+                        </div>
+                    </div>
+                </li>
+            
+            <li class="section--item">
+                <div class="section--heading-group">
+                    <div class="section--date">
+                        Correo electrónico
+                    </div>
+                    <div class="section--heading">
+                        <h3>juanmcavilla@gmail.co</h3>
+                    </div>
+                </div>
+            </li>
+
+            
+                <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Fecha de nacimiento
+                        </div>
+                        <div class="section--heading">
+                            <h3>
+                                                                    07-08-1991
+                                                            </h3>
+                        </div>
+                    </div>
+                </li>
+            
+
+            
+                <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Lugar de nacimiento
+                        </div>
+                        <div class="section--heading">
+                            <h3>Buenos Aires</h3>
+                        </div>
+                    </div>
+                </li>
+            
+            
+                <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Género
+                        </div>
+                        <div class="section--heading">
+                            <h3>                                    Hombre
+                                </h3>
+                        </div>
+                    </div>
+                </li>
+            
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Nacionalidad
+                        </div>
+                        <div class="section--heading">
+                            <h3>Argentina</h3>
+                        </div>
+                    </div>
+                </li>
+            
+
+
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Estado civil
+                        </div>
+                        <div class="section--heading">
+                            <h3>
+                                                                    Soltero
+                                                            </h3>
+                        </div>
+                    </div>
+                </li>
+            
+
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Permiso de conducir
+                        </div>
+                        <div class="section--heading">
+                            <h3> B</h3>
+                        </div>
+                    </div>
+                </li>
+            
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            Página web
+                        </div>
+                        <div class="section--heading">
+                            <h3>https://jmcavilla.github.io/my-curriculum/</h3>
+                        </div>
+                    </div>
+                </li>
+            
+                            <li class="section--item">
+                    <div class="section--heading-group">
+                        <div class="section--date">
+                            LinkedIn
+                        </div>
+                        <div class="section--heading">
+                            <h3>https://www.linkedin.com/in/juan-manuel-cavilla-152a1739/</h3>
+                        </div>
+                    </div>
+                </li>
+                    </ol>
+
+    </div>
+
+
+    
+        
+            <div class="section" >
+
+                <div class="section--title" >
+                    <h2>
+                        Perfil
+                    </h2>
+                </div>
+
+                <div class="section--content section--content-single-textarea">
+                    <p>Me considero una persona comprometida y proactiva, siempre dispuesto a mejorar como profesional y ayudar a otros que lo logren. Me siento con la capacidad de acompañar y compartir mis conocimientos a mis compañeros para contribuir a su crecimiento personal y profesional.</p><p>Seguir creciendo como profesional y continuar aumentando y perfeccionando mis conocimientos técnicos es una de mis deseos, así como también tener la oportunidad de lograr conseguir un trabajo desafiante fuera de mi país.</p><p>En estos momentos mi objetivo está puesto en seguir mejorando mi capacidad técnica en el desarrollo de aplicaciones web y mobile con las últimas tecnologías más usadas en el ambiente laboral, tales como React, Angular, VueJs, etc. También me gustaría mejorar mi capacidad en lenguajes de desarrollo nativo como Swift y Kotlin, y sumar conocimiento en desarrollo nativo en React Native.</p>
+                </div>
+
+            </div>
+
+        
+    
+        
+            
+                <div class="section " >
+
+                    <div class="section--title" >
+                        <h2>
+                            Experiencia laboral
+                        </h2>
+                    </div>
+
+                    <div class="section--time-line-overlay"></div>
+
+                    <ol class="section--list">
+                                                    <li class="section--item">
+                                <div class="section--time-line">
+                                    <i class="section--time-line-dot"></i>
+                                </div>
+                                <div class="section--time-line-hide-overlay"></div>
+                                <div class="section--heading-group">
+                                    <div class="section--date">nov 2011 - ene 2014</div>
+                                    <div class="section--heading">
+                                        <h3>Java Developer</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Accenture, Buenos Aires                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Mi primer trabajo. Forme parte de varios equipos desarrollando en Java. Trabaje en proyectos para clientes como Telefónica, Telecom Italia e Iberdrola. Aquí comencé mi aprendizaje en distintos Frameworks Java como Struts 1 y 2, Spring, Maven, etc.</p>
+                                    </div>
+                                                            </li>
+                                                    <li class="section--item">
+                                <div class="section--time-line">
+                                    <i class="section--time-line-dot"></i>
+                                </div>
+                                <div class="section--time-line-hide-overlay"></div>
+                                <div class="section--heading-group">
+                                    <div class="section--date">ene 2014 - jun 2017</div>
+                                    <div class="section--heading">
+                                        <h3>Java Developer SSR</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Indra, Buenos Aires                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>En Indra participe en dos proyectos. Ambos para la empresa Telefónica. El primer proyecto fue directamente para Telefónica, en la actualización del sistema interno de asignación de tipos de líneas. Luego, participe para un proyecto de Movistar, donde estábamos encargados del sistema de asignación de tickets para el personal de gestión de tareas de la empresa.</p>
+                                    </div>
+                                                            </li>
+                                                    <li class="section--item">
+                                <div class="section--time-line">
+                                    <i class="section--time-line-dot"></i>
+                                </div>
+                                <div class="section--time-line-hide-overlay"></div>
+                                <div class="section--heading-group">
+                                    <div class="section--date">jul 2017 - ene 2018</div>
+                                    <div class="section--heading">
+                                        <h3>Full stack Developer SSR.</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Quadion Technologies, Buenos Aires                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Llegue a Quadion como un Java Developer SSR, pero acá conocí lo que hoy me apasiona, el desarrollo web. Ingrese para el proyecto de la aplicación y la página mobile de la empresa de Salud OSDE. Comencé a aprender nuevas tecnologías sobre todo Javascript y más puntualmente aprendiendo frameworks como AngularJS, Ionic y Sencha.</p>
+                                    </div>
+                                                            </li>
+                                                    <li class="section--item">
+                                <div class="section--time-line">
+                                    <i class="section--time-line-dot"></i>
+                                </div>
+                                <div class="section--time-line-hide-overlay"></div>
+                                <div class="section--heading-group">
+                                    <div class="section--date">ene 2018 - mar 2019</div>
+                                    <div class="section--heading">
+                                        <h3>Full stack Developer SR.</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Quadion Technologies, Buenos Aires                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Luego de un tiempo aprendiendo las nuevas tecnologías y con el acompañamiento de un gran equipo y por sobre todo un gran líder de proyecto, se me recompenso con un crecimiento dentro del proyecto, donde pase a tener más responsabilidades con respecto al cliente como con mis compañeros. Con este crecimiento se me dio la oportunidad de ser responsable de la actualización de la arquitectura del Backend hecho en Java que se utiliza para las apps de iOS y Android y la web mobile.</p>
+                                    </div>
+                                                            </li>
+                                                    <li class="section--item">
+                                <div class="section--time-line">
+                                    <i class="section--time-line-dot"></i>
+                                </div>
+                                <div class="section--time-line-hide-overlay"></div>
+                                <div class="section--heading-group">
+                                    <div class="section--date">abr 2019 - Actualidad</div>
+                                    <div class="section--heading">
+                                        <h3>Tech Leader</h3>
+                                    </div>
+                                    <div class="section--sub-heading">
+                                        Quadion Technologies, Buenos Aires                                    </div>
+                                </div>
+                                                                    <div class="section--content">
+                                        <p>Luego de la partida de parte del equipo de la empresa, y en particular del líder del proyecto, se me dio la responsabilidad de hacerme cargo del liderazgo del mismo. Desde ese momento empece a tener más responsabilidades tanto con el trato con el cliente como también con mis compañeros de equipo. Con el equipo estamos impulsando la migración tecnológica de las apps móviles las cuales están desarrolladas en el Framework Sencha junto con Cordova, las cuales queremos reemplazar con ReactJS juno a IONIC 5. Este proceso está comenzando y ya el cliente nos dio el visto bueno para comenzar dicha migración con vistas a estar terminada en los próximos meses.</p>
+                                    </div>
+                                                            </li>
+                                            </ol>
+                </div>
+            
+        
+    
+        
+            
+                <div class="section" >
+
+                    <div class="section--title" >
+                        <h2>
+                            Idiomas
+                        </h2>
+                    </div>
+
+
+                    <ol class="section--list skills">
+
+                        
+                                                            <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Español</h3>
+                                    </div>
+                                    <div class="skills--stars">
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level active"></i>
+                                    </div>
+                                </li>
+                                                    
+                                                            <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Ingles</h3>
+                                    </div>
+                                    <div class="skills--stars">
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level "></i>
+                                        <i class="skills--level "></i>
+                                    </div>
+                                </li>
+                                                    
+                                                            <li class="section--item skills">
+                                    <div class="skills--label">
+                                        <h3>Italiano</h3>
+                                    </div>
+                                    <div class="skills--stars">
+                                        <i class="skills--level active"></i>
+                                        <i class="skills--level "></i>
+                                        <i class="skills--level "></i>
+                                        <i class="skills--level "></i>
+                                        <i class="skills--level "></i>
+                                    </div>
+                                </li>
+                                                    
+                    </ol>
+
+                </div>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+
+        
+    
+        
+            
+            
+                            <div class="section" >
+
+                    <div class="section--title" >
+                        <h2>
+                            Tecnologías
+                        </h2>
+                    </div>
+
+                    <div class="section--content section--content-single-textarea">
+                        <ul><li>React.JS</li><li>Angular 2+</li><li>React Native</li><li>Ionic</li><li>NodeJS</li><li>Java</li><li>AngularJS</li><li>Javascript</li></ul>
+                    </div>
+
+                </div>
+                    
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+    
+        
+            
+        
+    </section>
+
+</body>
+</html>
