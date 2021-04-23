@@ -25,7 +25,7 @@ export const InfoBlock = () => {
     }
 
     const handleEmail = () => {
-        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=juanmcavilla@gmail.com');
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=juanmcavilla.dev@gmail.com');
     }
 
     const handleDownloadPDF = () => {
