@@ -29,7 +29,11 @@ export const InfoBlock = () => {
     }
 
     const handleDownloadPDF = () => {
-        window.open(`${process.env.PUBLIC_URL}/cv.pdf`)
+        if(lang === 'ES'){
+            window.open(`${process.env.PUBLIC_URL}/cv.pdf`)
+        }else {
+            window.open(`${process.env.PUBLIC_URL}/cv_en.pdf`)
+        }
     }
 
     useEffect(() => {
@@ -76,7 +80,7 @@ export const InfoBlock = () => {
                             fgColor="#FFFFFF"
                             level="Q"
                             style={{ width: '100%' }}
-                            value={`${window.location.href}/cv.pdf`}
+                            value={lang === 'ES' ? `${window.location.href}/cv.pdf` : `${window.location.href}/cv_en.pdf` }
                         />
                     </div>
                     <div className="d-block" style={{ marginTop: '2.5em'}}>
