@@ -11,7 +11,6 @@ export const LanguageBlock = ({ showMobile = false}) => {
     }
     return (
         <>
-            <Col>
                 <Row>
                     <Col xs="6">
                         <div style={{ 
@@ -19,11 +18,13 @@ export const LanguageBlock = ({ showMobile = false}) => {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            height: '15%',
                         }}>
                             <Button 
-                                variant={lang === 'EN' ? "warning" : "outline-warning"}
+                                variant={lang === 'EN' ? "customColor" : "outline-customColor"}
                                 onClick={() => changeLang('EN')}
+                                style={{
+                                    width: '100%'
+                                }}
                             >
                             <i className="fas fa-globe" style={{ marginRight: '3px'}}></i>EN
                             </Button>
@@ -37,11 +38,13 @@ export const LanguageBlock = ({ showMobile = false}) => {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            height: '15%',
                         }}>
                             <Button 
-                                variant={lang === 'ES' ? "warning" : "outline-warning"}
+                                variant={lang === 'ES' ? "customColor" : "outline-customColor"}
                                 onClick={() => changeLang('ES')}
+                                style={{
+                                    width: '100%'
+                                }}
                             >
                                 <i className="fas fa-globe" style={{ marginRight: '3px'}}></i>ES
                             </Button>
@@ -49,7 +52,6 @@ export const LanguageBlock = ({ showMobile = false}) => {
                         </div>
                     </Col>
                 </Row>
-            </Col>
         </>
     )
 }

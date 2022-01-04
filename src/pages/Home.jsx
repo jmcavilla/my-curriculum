@@ -11,6 +11,9 @@ import moment from 'moment'
 import { HelloBlock } from '../components/HelloBlock'
 import { useParams } from 'react-router';
 import { setLang } from '../store/i18n/i18nReducer';
+import { LanguageBlock } from '../components/LanguageBlock';
+import QRBlock from '../components/QRBlock';
+import TechBlock from '../components/TechBlock';
 
 const Home = () => {
     let { lang } = useParams();
@@ -22,27 +25,55 @@ const Home = () => {
 
     return (
         <>
+            <Row>
+                <Col md={9} xl={9}></Col>
+                <Col md={3} xl={3}>
+                    <div className="d-block" style={{ marginTop: '2.5em'}}>
+                        <LanguageBlock showMobile={true}/>
+                    </div>
+                </Col>
+            </Row>
+            <Row style={{
+                marginTop: '2em'
+            }}>
+                <Col xs={12} md={12} xl={12}>
+                    <HelloBlock />
+                </Col>
+            </Row>
+            <Row style={{
+                marginTop: '2em'
+            }}>
+                <Col xs={12} md={12} xl={12}>
+                    <QRBlock />
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <NumbersBlock />
+                </Col>
+            </Row>
+            <Row style={{
+                marginTop: '2em'
+            }}>
+                <Col xs={12} md={12} xl={12}>
+                    <ExperienceBlock />
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={12} xl={12}>
+                    <TechBlock/>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={12} xl={12}>
+                    {/* <TechCarousel /> */}
 
-            {
-                <Row style={{
-                    marginTop: '2em'
-                }}>
-                    <Col xs={12} md={3} xl={3}>
-                        <InfoBlock />
-                    </Col>
-                    <Col xs={12} md={9} xl={9}>
-                        <HelloBlock />
-                        <WhoBlock />
-                        <NumbersBlock />
-                        <TechCarousel />
-                        <ExperienceBlock />
-                        <div className="footer" style={{boxShadow: '10px 10px 16px 0px rgb(0 0 0 / 42%)'}}>
-                            <p style={{ marginBottom: '0', color: 'rgb(122, 122, 122)'}}>© {moment().year()} All Rights Reserved.</p>
-                            <p className="footer-email d-none d-lg-block">juanmcavilla.dev@gmail.com</p>
-                        </div>
-                    </Col>
-                </Row>
-            }   
+                    <div className="footer" style={{ borderTop: '3px solid #00e295', color: 'black', backgroundColor: 'white'}}>
+                        <p style={{ marginBottom: '0', color: 'rgb(122, 122, 122)'}}>© {moment().year()} All Rights Reserved.</p>
+                        <p className="footer-email d-none d-lg-block">juanmcavilla.dev@gmail.com</p>
+                    </div>
+                </Col>
+            </Row>
         </>
     )
 }

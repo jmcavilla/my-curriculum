@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 const WhoBlock = () => {
     const { lang } = useSelector(state => state.i18n);
     return (
-        <Jumbotron style={{ backgroundColor: '#20202a', color: 'white', boxShadow: "10px 10px 16px 0px rgb(0 0 0 / 42%)"}}>
+        <Jumbotron className='jumbotron__main'>
 
-            <h1 className="display-5" style={{ color: '#ffc107'}}>{lang === 'ES' ? `¿Quién soy?` : `Who am I?`}</h1>
+            <h1 className="display-5" style={{ color: '#000000'}}>{lang === 'ES' ? `¿Quién soy?` : `Who am I?`}</h1>
             {
             lang === 'ES' 
             ? 

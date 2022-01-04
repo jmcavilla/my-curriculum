@@ -16,9 +16,9 @@ export const ExperienceBlock = () => {
     return (
         <>
             
-            <Jumbotron style={{ backgroundColor: '#111116', color: 'white', boxShadow: "10px 10px 16px 0px rgb(0 0 0 / 42%)"}}>
-                <h4 style={{textAlign: 'center'}}>{lang == 'ES' ? `Experiencia` : 'Experience'}</h4>
-                <hr style={{ color: 'gray', backgroundColor:'gray'}}></hr>
+            <Jumbotron className='jumbotron__main'>
+                <h2 style={{textAlign: 'center', marginBottom: '60px'}}>{lang == 'ES' ? `Experiencia` : 'Experience'}</h2>
+                <hr style={{ color: '#00e295', backgroundColor:'#00e295'}}></hr>
                 {
                     jobs && jobs.map( (job,index) => (
                         <ExpCard 
@@ -28,7 +28,9 @@ export const ExperienceBlock = () => {
                             time={job.time} 
                             description={job.description} 
                             type={(index%2 == 0) ? 'left' : 'right'}
-                        
+                            allPositions={job.allPositions}
+                            moreInfo={job.moreInfo}
+                            size={job.size}
                         />
 
                     ))

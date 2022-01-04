@@ -8,17 +8,17 @@ const info_es = {
       {
           "lang": "Español",
           "perc": 100,
-          "variant": "success"
+          "variant": "customColor"
       },
       {
           "lang": "Ingles",
-          "perc": 66,
-          "variant": "warning"
+          "perc": 50,
+          "variant": "customColor"
       },
       {
           "lang": "Italiano",
-          "perc": 33,
-          "variant": "danger"
+          "perc": 10,
+          "variant": "customColor"
       }
   ]
 }
@@ -32,17 +32,17 @@ const info_en = {
       {
           "lang": "Spanish",
           "perc": 100,
-          "variant": "success"
+          "variant": "customColor"
       },
       {
           "lang": "English",
-          "perc": 70,
-          "variant": "warning"
+          "perc": 50,
+          "variant": "customColor"
       },
       {
           "lang": "Italian",
-          "perc": 20,
-          "variant": "danger"
+          "perc": 10,
+          "variant": "customColor"
       }
   ]
 }

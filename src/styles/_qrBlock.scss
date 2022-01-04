@@ -1,0 +1,17 @@
+.qrBlock__button-container{
+    margin-top: 2.5em;
+    justify-content: flex-end;
+    display: flex;
+
+    
+}
+.qrBlock__links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.qrBlock__info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

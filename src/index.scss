@@ -1,3 +1,8 @@
+$theme-colors: (
+    "warning": #00e295,
+    "danger": teal
+);
+
 @import './../node_modules/bootstrap/scss/functions';
 @import './../node_modules/bootstrap/scss/variables';
 @import './styles/colors';
@@ -6,17 +11,45 @@
 @import './styles/cards';
 @import './styles/content';
 @import './styles/infoBlock';
+@import './styles/numbers';
+@import './styles/qrBlock';
 
 body{
-    background-color: #191923;
+    // background-color: #191923;
 }
 
 i:hover{
     cursor: pointer;
 }
 
+.btn-customColor{
+    background-color: #00e295;
+    border-color: #000000;
+    border: 1px solid;
+
+    &:hover{
+        border: 2px solid #00e295;
+        background-color: rgb(44, 44, 44);
+        color: #00e295;
+    }
+}
+
+.btn-outline-customColor{
+    border: 2px solid #00e295;
+
+    &:hover{
+        border: 2px solid #000000;
+        background-color: #00e295;
+    }
+}
+
+.bg-customColor{
+    background-color: #00e295;
+}
+
+
 .footer {
-    background-color: #20202a;
+    background-color: #00e295;
     color: white;
     height: 10vh;
     margin-bottom: 5vh;
@@ -48,4 +81,11 @@ i:hover{
 
 .slick-dots li button:before{
     color: white;
+}
+
+.jumbotron__main{
+    border-top: 3px solid #00e295;
+    color: black; 
+    background-color: white; 
+    margin-bottom: 0px;
 }

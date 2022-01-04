@@ -10,7 +10,8 @@ export const HelloBlock = () => {
 
     return (
         <>
-            <Jumbotron 
+            <Jumbotron
+                className='animate__animated animate__slideInRight' 
                 style={{ 
                     // backgroundColor: '#20202a', 
                     color: 'white', 
@@ -19,7 +20,6 @@ export const HelloBlock = () => {
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
-                    height: '200px',
                     padding: '0'
                 }}>
                     <div style={{
@@ -27,7 +27,7 @@ export const HelloBlock = () => {
                         height: '100%',
                         padding: '30px'
                     }}>
-                        <h1>{lang === 'ES' ? `Hola, Mundo!` : `Hello, world!`}</h1>
+                        <h1>{lang === 'ES' ? `¡Hola, Mundo!` : `Hello, world!`}</h1>
                         <p>
                             {lang === 'ES' ? text_es : text_en}
                         </p>
