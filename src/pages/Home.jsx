@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Col, Row, } from 'react-bootstrap'
-import WhoBlock from '../components/WhoBlock'
-import { getEducation } from '../helpers/education';
-import { InfoBlock } from '../components/InfoBlock';
 import { ExperienceBlock } from '../components/ExperienceBlock';
-import { useDispatch, useSelector } from 'react-redux';
-import { TechCarousel } from '../components/TechCarousel'
+import { useDispatch } from 'react-redux';
 import { NumbersBlock } from '../components/NumbersBlock'
 import moment from 'moment'
 import { HelloBlock } from '../components/HelloBlock'
@@ -21,7 +17,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(setLang(lang && lang.toUpperCase()))
-    }, [])
+    }, [dispatch, lang])
 
     return (
         <>
