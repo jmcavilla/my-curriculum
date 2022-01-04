@@ -29,6 +29,7 @@ export const ExperienceBlock = () => {
                             allPositions={job.allPositions}
                             moreInfo={job.moreInfo}
                             size={job.size}
+                            projects={job.projects}
                         />
 
                     ))

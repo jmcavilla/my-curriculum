@@ -15,7 +15,7 @@ const TechBlock = () => {
             <CardColumns >
                 {
                     techs && techs.map( (tech, i) => (
-                        <Card className={`animate__animated animate__slideIn${tech.slide}`}>
+                        <Card key={i} className={`animate__animated animate__slideIn${tech.slide}`}>
                             <Card.Img variant="top" src={tech.img}  />
                         </Card>
                     ))

@@ -20,6 +20,8 @@
     .small{
         padding: 15px !important;
     }
+
+    
 }
 .card__p{
     text-transform: capitalize;
@@ -44,4 +46,22 @@
     background: #00e295;
     display:inline-block;
     margin:0 10px;
+}
+
+.card__project-container{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card__store-container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    .store{
+        max-width: 200px !important;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
